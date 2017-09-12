@@ -1,30 +1,37 @@
 
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h1>{{author}}</h1>
-    <h1>{{author1}}</h1>
-    <h1>{{doubleCount}}</h1>
-    <input v-model="iptVal"></input>
-    <button slot="append" @click="setAuthor" icon="search"></button>
-    <World :message="message" ></World>
+    <ul v-for="i in Object.keys(msg)">
+      <h1 @click="showStu(i)">{{ msg[i].name }}</h1>
+      <li v-for="stu in msg[i].students"
+          :style="{ display: msg[i].show ? 'block' : 'none' }"
+      >{{ stu }}</li>
+    </ul>
   </div>
 </template>
 
 <script>
-import World from './world';
 
 export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
-      iptVal: "",
-      message: "this is the message"
+      msg : {
+        'class1' : {
+            show: false, 
+            name: "三年级一班",
+            students: ['Lilei', 'Hanmeimei']
+        },
+        'class2' : {
+            show: false, 
+            name: "三年级二班",
+            students: ['lucy', 'lily']
+        }
+      }
     }
   },
   components: {
-    World
+    
   },
   computed: {
     author () {
@@ -38,8 +45,8 @@ export default {
     }
   },
   methods: {
-    setAuthor: function(author) {
-      this.$store.commit('account/newAuthor', this.iptVal)
+    showStu: function(className) {
+      this.msg[className].show = !this.msg[className].show;
     }
   }
 }
@@ -47,6 +54,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 input {
   border: 1px solid red;
   outline: none;
