@@ -7,11 +7,12 @@
           :style="{ display: msg[i].show ? 'block' : 'none' }"
       >{{ stu }}</li>
     </ul>
+    <World :message="theMsg"/>
   </div>
 </template>
 
 <script>
-
+import World from './world';
 export default {
   name: 'hello',
   data () {
@@ -27,11 +28,12 @@ export default {
             name: "三年级二班",
             students: ['lucy', 'lily']
         }
-      }
+      },
+      theMsg: 'hello'
     }
   },
   components: {
-    
+    World
   },
   computed: {
     author () {
@@ -44,9 +46,35 @@ export default {
       return this.$store.getters.doubleCount
     }
   },
+
+  beforeCreate: function () {
+      console.log('beforeCreate 创建前状态===============》');
+  },
+  created: function () {
+      console.log('created 创建完毕状态===============》');
+  },
+  beforeMount: function () {
+      console.log('beforeMount 挂载前状态===============》');
+  },
+  mounted: function () {
+      console.log('mounted 挂载结束状态===============》');
+  },
+  beforeUpdate: function () {
+      console.log('beforeUpdate 更新前状态===============》');
+  },
+  updated: function () {
+      console.log('updated 更新完成状态===============》');
+  },
+  beforeDestroy: function () {
+      console.log('beforeDestroy 销毁前状态===============》');
+  },
+  destroyed: function () {
+      console.log('destroyed 销毁完成状态===============》');
+  },
   methods: {
     showStu: function(className) {
       this.msg[className].show = !this.msg[className].show;
+      this.theMsg = "hello" + new Date();
     }
   }
 }
