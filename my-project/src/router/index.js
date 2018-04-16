@@ -7,7 +7,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/Hello',
       name: 'Hello',
       component: Hello
     },
@@ -15,6 +15,16 @@ export default new Router({
       path: '/world',
       name: 'World',
       component: World
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: require('../container/login/index.vue')
+    },
+    {
+      path: '*',
+      name: 'login',
+      component: require('../container/login/index.vue')
     }
   ]
 })
