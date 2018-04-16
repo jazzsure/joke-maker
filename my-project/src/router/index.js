@@ -23,7 +23,7 @@ export default new Router({
     },
     {
       path: '*',
-      name: 'login',
+      name: 'default',
       component: require('../container/login/index.vue')
     }
   ]
