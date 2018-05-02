@@ -1,0 +1,19 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bufferhelper": "^0.2.1",
+    "cheerio": "^1.0.0-rc.2",
+    "http": "0.0.0",
+    "iconv-lite": "^0.4.21",
+    "mysql": "^2.15.0",
+    "url": "^0.11.0"
+  }
+}
