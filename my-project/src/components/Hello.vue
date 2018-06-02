@@ -21,12 +21,12 @@
       return {
         msg : {
           'class1' : {
-              show: false, 
+              show: false,
               name: "三年级一班",
               students: ['Lilei', 'Hanmeimei']
           },
           'class2' : {
-              show: false, 
+              show: false,
               name: "三年级二班",
               students: ['lucy', 'lily']
           }
@@ -81,8 +81,8 @@
       },
       jump: function(router){
         this.$router.push('/world')
-        //this.$router.push(location) 
-        
+        //this.$router.push(location)
+
       },
       handlechange(){
         console.log('user', this.user, this.$data)
