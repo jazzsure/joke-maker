@@ -9,7 +9,7 @@
     </ul>
     <World :message="theMsg"/>
     <button @click="jump('author')"></button>
-    <input v-model="user.name" v-on:input="handlechange"></input>
+    <input v-model="user.name" v-on:input="handlechange">
   </div>
 </template>
 
