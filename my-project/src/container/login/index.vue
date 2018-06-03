@@ -1,6 +1,7 @@
 
 <template>
   <div class="hello">
+    <Header></Header>
     <div class="banner"></div>
     <input v-model="username" type="text" v-on:input="handlechange"></input>
     <input v-model="password" type="password" v-on:input="handlechange"></input>
@@ -10,6 +11,7 @@
 </template>
 
 <script>
+  import Header from '../../components/Header'
   export default {
     name: 'login',
     data () {
@@ -19,10 +21,10 @@
       }
     },
     components: {
-
+      Header
     },
     computed: {
-      
+
     },
     methods: {
       handlechange(){
