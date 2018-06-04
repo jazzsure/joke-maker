@@ -20,6 +20,7 @@
 <script>
   import World from './world';
   import { Toast} from 'mint-ui';
+//  import {Button} from 'mint-ui';
 //  import { Button} from 'mint-ui';
   export default {
     name: 'hello',
