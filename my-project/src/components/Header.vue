@@ -27,6 +27,8 @@
 
 <style scoped>
 .header{
-  width: ;
+  width: 100%;
+  height: 190px;
+  background-color: #d33d3e;
 }
 </style>

@@ -9,15 +9,17 @@ import './config/rem'
 
 Vue.use(Vuex);
 
-//引入mint-ui
-import Mint from 'mint-ui';
-Vue.use(Mint);
-import 'mint-ui/lib/style.css';
-
-import { Button } from 'mint-ui';
+//引入相关的mint-ui组件
+import {Button} from 'mint-ui';
 Vue.component(Button.name, Button);
+// Vue.component(Toast.name, Toast);
+/* 或写为
+ * Vue.use(Button)
+ * Vue.use(Cell)
+ */
 
-Vue.config.productionTip = false
+
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({

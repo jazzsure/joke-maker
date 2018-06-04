@@ -10,13 +10,22 @@
     <World :message="theMsg"/>
     <button @click="jump('author')"></button>
     <input v-model="user.name" v-on:input="handlechange">
+
+
+    <mt-button type="danger" @click="test">danger</mt-button>
+
   </div>
 </template>
 
 <script>
   import World from './world';
+  import { Toast} from 'mint-ui';
+//  import { Button} from 'mint-ui';
   export default {
     name: 'hello',
+    props: {
+      headerProps: Object
+    },
     data () {
       return {
         msg : {
@@ -86,6 +95,9 @@
       },
       handlechange(){
         console.log('user', this.user, this.$data)
+      },
+      test(){
+        Toast('我是Tip');
       }
     }
   }
@@ -94,19 +106,4 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-input {
-  border: 1px solid red;
-  outline: none;
-  height: 18px;
-}
-h1 {
-  font-size: 20px;
-  word-break: break-word;
-}
-button {
-  width: 5rem;
-  height: 20px;
-  border: 1px solid red;
-  vertical-align: middle;
-}
 </style>
