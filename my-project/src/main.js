@@ -10,8 +10,10 @@ import './config/rem'
 Vue.use(Vuex);
 
 //引入相关的mint-ui组件
-import {Button} from 'mint-ui';
+import { Header, Button, Search, } from 'mint-ui';
 Vue.component(Button.name, Button);
+Vue.component(Header.name, Header);
+Vue.component(Search.name, Search);
 // Vue.component(Toast.name, Toast);
 /* 或写为
  * Vue.use(Button)
