@@ -1,13 +1,13 @@
 
 <template>
   <div class="hello">
-    <Header></Header>
+    <HeaderBar></HeaderBar>
 
   </div>
 </template>
 
 <script>
-  import Header from '../../components/Header'
+  import HeaderBar from '../../components/HeaderBar'
   export default {
     name: 'login',
     data () {
@@ -17,7 +17,7 @@
       }
     },
     components: {
-      Header
+      HeaderBar
     },
     computed: {
 

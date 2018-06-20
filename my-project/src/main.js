@@ -10,15 +10,9 @@ import './config/rem'
 Vue.use(Vuex);
 
 //引入相关的mint-ui组件
-import { Header, Button, Search, } from 'mint-ui';
-Vue.component(Button.name, Button);
-Vue.component(Header.name, Header);
-Vue.component(Search.name, Search);
-// Vue.component(Toast.name, Toast);
-/* 或写为
- * Vue.use(Button)
- * Vue.use(Cell)
- */
+import Mint from 'mint-ui'
+import 'mint-ui/lib/style.css'
+Vue.use(Mint)
 
 
 Vue.config.productionTip = false;
