@@ -9,22 +9,25 @@
           :title="item"
           :key="index"
           :right="[
-            {content: '发布', style: { background: 'yellow', color: '#fff' }, handler(){release(index)}},
+            {content: '发布', style: { background: 'yellow', color: '#000' }, handler(){release(index)}},
             {content: '删除', style: { background: 'red', color: '#fff' }, handler(){release(index)}}
           ]">
         </mt-cell-swipe>
 
       </mt-loadmore>
     </div>
+    <FooterBar></FooterBar>
   </div>
 </template>
 
 <script>
   import HeaderBar from '../components/HeaderBar'
+  import FooterBar from '../components/FooterBar'
   export default {
     name: 'Main',
     components:{
-      HeaderBar
+      HeaderBar,
+      FooterBar
     },
     data () {
       return {
