@@ -41,8 +41,16 @@ export default new Router({
       component: r => require.ensure([], () => r(require('../pages/Main')), 'Main')
     },
     {
-      path: '*',
+      path: '/main',
       component: r => require.ensure([], () => r(require('../pages/Main')), 'Main')
+    },
+    {
+      path: '/tool',
+      component: r => require.ensure([], () => r(require('../pages/Tool')), 'Tool')
+    },
+    {
+      path: '/mine',
+      component: r => require.ensure([], () => r(require('../pages/Mine')), 'Mine')
     }
   ]
 })
